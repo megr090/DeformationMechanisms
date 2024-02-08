@@ -5,9 +5,9 @@ R = 8.314; % J/mol K
 Temp = T-273;
 
 % Activation Energy for Creep
-tp = 0;
-tm = -20;
-tc = -11;
+tp = -13;
+tm = -23;
+tc = -18;
 
 Qcp = Qgbsplus; %kJ/mol
 Qcm = Qgbsminus; %kJ/mol
@@ -28,10 +28,10 @@ A0 = 10.^A0;
 % Grain Boundary Sliding
 Agbs = zeros(size(T));
 for i=1:length(T)
-    if T(i) < 262
+    if T(i) < 255
         %A0 = A0gbsminus;
         %Qcgbs = Qgbsminus;
-    elseif T(i) >= 262
+    elseif T(i) >= 255
         %A0 = A0gbsplus;
         %Qcgbs = Qgbsplus;
     end

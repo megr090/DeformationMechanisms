@@ -2,10 +2,10 @@
 clear all;
 
 % activation energy values
-Qdisplus = 151e3;
+Qdisplus = 181e3;
 Qdisminus = 60e3;
-Qgbsplus = 255e3;
-Qgbsminus = 75e3;
+Qgbsplus = 192e3;
+Qgbsminus = 49e3;
 
 % other parameter values
 p = 9; % grain size exponent from grain size model
@@ -21,7 +21,7 @@ load('temperatureest_antarctica_theta099_intermediaten.mat');
 
 % load in rest of data needed (strain rates, ice thickness, surface velocity, surface mass
 % balance)
-[SRmat,Tmat,Vmat,SMBmat,Xfix,Yfix] = readData_Antarctica();
+[SRmat,Tmat,Vmat,SMBmat,Tsmat,Xfix,Yfix,R_V] = readData_Antarctica();
 
 % load deformation map that defines n,A for
 % given strain rate, temperature
@@ -51,7 +51,6 @@ save(title_save,'temp_map','nmat_lookup','Amat_lookup');
 al = ones(size(nmat_lookup));
 al(Vmat<30) = 0;
 al(abs(Vmat)>5000) = 0;
-[Tssing,R_V] = geotiffread('/Users/meghanaranganathan/Documents/MIT/Research/Data/SameExtent/racmo_tskin_fixedextent.tif');
 xaxis = linspace(R_V.XWorldLimits(1)./1000, R_V.XWorldLimits(2)./1000, size(SRmat,2));
 yaxis = linspace(R_V.YWorldLimits(1)./1000,R_V.YWorldLimits(2)./1000,size(SRmat,1));
 load('groundingline.mat')
@@ -85,7 +84,7 @@ for i=1:676
 end
 colormap(colorcet('l10'));
 %colorbar;
-caxis([-28 -16])
+caxis([-31 -27])
 cbar = colorbar;
 xticks([]);
 xticklabels({});

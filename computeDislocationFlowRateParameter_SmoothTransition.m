@@ -5,9 +5,9 @@ R = 8.314; % J/mol K
 Temp = T-273;
 
 % Activation Energy for Creep
-tp = 0;
+tp = -10;
 tm = -20;
-tc = -11;
+tc = -15;
 
 Qcp = Qdisplus; %kJ/mol
 Qcm = Qdisminus; %kJ/mol
@@ -28,10 +28,10 @@ A0 = 10.^A0;
 % % Dislocation Creep
 Adis = zeros(size(T)); % MPa^-4 s^-1 
 for i=1:length(T)
-    if T(i) < 262
+    if T(i) < 258
         %A0 = A0disminus;
         %Qcdis = Qdisminus;
-    elseif T(i) >= 262
+    elseif T(i) >= 258
         %A0 = A0displus;
         %Qcdis = Qdisplus;
     end

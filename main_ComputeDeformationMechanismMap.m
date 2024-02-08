@@ -16,14 +16,14 @@ theta = 0.99; % energy partitioning between thermal and stored energy
 dep = 0.001; % strain rate range for which n is approximately the same
 
 % kinetic parameters for the composite flow law
-A0displus = 6.96e23;
-A0disminus = 5e5;
-Qdisplus = 151e3;
+A0displus = 6e28;
+A0disminus = 1.2e6;
+Qdisplus = 181e3;
 Qdisminus = 60e3;
-A0gbsplus = 8.5e37;
-A0gbsminus = 1.1e2;
-Qgbsplus = 255e3;
-Qgbsminus = 75e3;
+A0gbsplus = 3e26;
+A0gbsminus = 3.9e-3;
+Qgbsplus = 192e3;
+Qgbsminus = 49e3;
 
 % strain rate and temperature range of interest
 strainrate = logspace(-13,-6,100); 

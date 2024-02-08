@@ -1,8 +1,10 @@
 %% Create plots of strain-rate partitioning between dislocation creep and grain-boundary sliding from Antarctic Ice Streams
 
 clear all;
+close all;
+
 % choose the ice stream
-icestream = 'PIG'; % options: BM (Bindschadler/MacAyeal), Byrd, Recovery, Amery, PIG
+icestream = 'Byrd'; % options: BM (Bindschadler/MacAyeal), Byrd, Recovery, Amery, PIG
 
 [SRmat,Tmat,Vmat,SMBmat,Tsmat,Tempmat,Xfix,Yfix] = readData(icestream);
 
@@ -14,10 +16,10 @@ dep = 0.001; % range of strain rates for which n is approximately the same
 thetamat = 0.99.*ones(size(SRmat)); % energy partitioning between thermal and stored energy
 
 % activation energy values
-Qdisplus = 151e3;
+Qdisplus = 181e3;
 Qdisminus = 60e3;
-Qgbsplus = 255e3;
-Qgbsminus = 75e3;
+Qgbsplus = 192e3;
+Qgbsminus = 49e3;
 
 % strain rate and temperature range of interest
 strainrate = logspace(-13,-6,100);
