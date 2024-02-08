@@ -1,19 +1,19 @@
 function [SRmat,Tmat,Vmat,SMBmat,Tsmat,Tempmat,Xfix,Yfix,R] = readData(icestream)
 % Velocity Contours
-[Esing,R_E] = geotiffread('/Users/meghanaranganathan/Documents/MIT/Research/Data/SameExtent/strainrates_in_seconds.tif');
+[Esing,R_E] = geotiffread('[insert path to strain-rate data in seconds]');
 E=double(Esing);
 E(isnan(E))=1e-12;
 
-[Vsing,R_V] = geotiffread('/Users/meghanaranganathan/Documents/MIT/Research/Data/SameExtent/surface_velocity_2014_2015_lowerres_fixedextent.tif');
+[Vsing,R_V] = geotiffread('[insert path to velocity data in m/yr]');
 V=double(Vsing);
 
-[Tsing,R] = geotiffread('/Users/meghanaranganathan/Documents/MIT/Research/Data/SameExtent/bedmachinev01_thickness_fixedres.tif');
+[Tsing,R] = geotiffread('[insert path to thickness data in meters]');
 T = double(Tsing);
 
-[SMB,R] = geotiffread('/Users/meghanaranganathan/Documents/MIT/Research/Data/SameExtent/smb_racmo_23_ant27_mean_fixedextent.tif');
+[SMB,R] = geotiffread('[insert path to surface mass balance data]');
 SMB = double(SMB);
 
-[Tssing,R] = geotiffread('/Users/meghanaranganathan/Documents/MIT/Research/Data/SameExtent/racmo_tskin_fixedextent.tif');
+[Tssing,R] = geotiffread('[insert path to surface temperature data]');
 Ts=double(Tssing);
 
 load('temperatureest_antarctica_theta099_intermediaten.mat');
