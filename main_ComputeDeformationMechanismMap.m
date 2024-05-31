@@ -17,7 +17,7 @@ dep = 0.001; % strain rate range for which n is approximately the same
 
 % kinetic parameters for the composite flow law
 A0displus = 6e28;
-A0disminus = 1.2e6;
+A0disminus = 4e5;
 Qdisplus = 181e3;
 Qdisminus = 60e3;
 A0gbsplus = 3e26;
