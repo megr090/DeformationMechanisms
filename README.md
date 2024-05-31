@@ -15,7 +15,4 @@ n in Antarctica or Antarctic Ice Streams.
 (4) main_ComputeN_AntarcticIceStreams.m calculates n and A over specific ice streams, with plotSRPartitioning.m being the function called to plot these values. You 
 can choose specific ice streams from the following list: Byrd, Bindschadler/MacAyeal, Recovery, Amery, and Pine Island Glacier.
 
-This repository also contains two .h5 files, which contain 100x100 arrays for estimates of n and A (respectively) for varying strain-rate and temperature (analogous to the deformation mechanism maps in the manuscript). The values in the arrays are n and A (in Pa^-n s^-1) for varying temperature (x) and strain-rate (y). The values of temperature and strain-rate can be found by:
-strainrate = logspace(-13,-6,100);
-temperature = linspace(240,273,100);
-[for the Matlab syntax]
+This repository also contains two .csv files, which contain 100x100 arrays for estimates of n and A (respectively) for varying strain-rate and temperature (analogous to the deformation mechanism maps in the manuscript). The values in the arrays are n and A (in Pa^-n s^-1) for varying temperature (x) and strain-rate (y). The .csv files contain row and column headers that denote the strain rate and temperature values associated with each n,A value. There are also .h5 files with the same 100x100 arrays, but these do not have the headers.
