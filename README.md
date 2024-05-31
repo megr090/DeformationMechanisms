@@ -1,6 +1,6 @@
 # DeformationMechanisms
 
-This repository contains code that accompanies the paper Ranganathan and Minchew, preprint "The highly nonlinear viscosity of fast-flowing glacier ice". The primary
+This repository contains code that accompanies the paper Ranganathan and Minchew 2024 "A modified viscous flow law for natural glacier ice: Scaling from laboratories to ice sheets", doi:10.1073/pnas.2309788121. The primary
 files are denoted with "main" at the beginning.
 
 (1) main_ComputeIceTemperature_Antarctica.m computes ice temperature using the model from Meyer and Minchew 2018 (specifically, it finds the maximum of that output 
